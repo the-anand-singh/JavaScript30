@@ -72,8 +72,8 @@
   <script>
     let calculateHourHandDegree = () => {
       let time = new Date();
-      let hours = +time.getHours();
-      let minutes = +time.getMinutes();
+      let hours = time.getHours();
+      let minutes = time.getMinutes();
       let deg = 30 * (hours >= 12 ? hours - 12 : hours);
       deg += (minutes / 2);
       return (deg);
@@ -81,17 +81,16 @@
 
     let calculateMinuteHandDegree = () => {
       let time = new Date();
-      let minutes = +time.getMinutes();
-      let seconds = +time.getSeconds();
+      let minutes = time.getMinutes();
+      let seconds = time.getSeconds();
       let deg = 6 * minutes;
       deg += (seconds / 10);
-      console.log(deg + 90);
       return (deg);
     }
 
     let calculateSecondHandDegree = () => {
       let time = new Date();
-      let seconds = +time.getSeconds();
+      let seconds = time.getSeconds();
       let deg = 6 * seconds;
       return (deg);
     }
